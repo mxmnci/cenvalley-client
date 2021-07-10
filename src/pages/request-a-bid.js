@@ -55,7 +55,7 @@ const RequestABid = () => {
     setLoading(true);
     try {
       const response = await axios.post(
-        `https://api.cenvalley.com/request-a-bid`,
+        `http://api.cenvalley.com/request-a-bid`,
         form
       );
       setPostMessage({
