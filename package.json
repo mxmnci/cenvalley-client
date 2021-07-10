@@ -30,9 +30,7 @@
     "react-helmet": "6.1.0",
     "react-intersection-observer": "8.31.1",
     "react-leaflet": "3.2.0",
-    "gatsby-plugin-postcss": "4.3.0"
-  },
-  "devDependencies": {
+    "gatsby-plugin-postcss": "4.3.0",
     "autoprefixer": "10.2.5",
     "postcss": "8.2.10",
     "tailwindcss": "2.1.1"
