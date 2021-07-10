@@ -1,0 +1,20 @@
+
+FROM node:alpine
+
+WORKDIR /app
+
+COPY package*.json ./
+
+RUN apk add --no-cache build-base gcc autoconf automake libtool zlib-dev libpng-dev nasm
+
+RUN npm update
+
+RUN npm install
+
+COPY . .
+
+ENV PORT 8000
+
+EXPOSE 8000
+
+CMD ["npm", "run", "develop"]
