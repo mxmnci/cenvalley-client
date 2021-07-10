@@ -33,7 +33,7 @@ const ContactForm = () => {
     setLoading(true);
     try {
       const response = await axios.post(
-        `http://api.cenvalley.com/contact`,
+        `https://api.cenvalley.com/contact`,
         form
       );
       setPostMessage({
