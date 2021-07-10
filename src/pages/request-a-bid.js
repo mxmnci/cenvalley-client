@@ -3,6 +3,7 @@ import Layout from "../components/Layout";
 import Wrapper from "../components/Wrapper";
 import Spinner from "../components/Spinner";
 import axios from "axios";
+import Seo from "../components/SEO";
 
 const RequestABid = () => {
   const initialState = {
@@ -76,6 +77,7 @@ const RequestABid = () => {
 
   return (
     <Layout>
+      <Seo title="Request a bid" />
       <section className="py-10">
         <Wrapper>
           <article className="flex flex-col items-center text-white">

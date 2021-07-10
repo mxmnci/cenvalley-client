@@ -6,10 +6,12 @@ import Wrapper from "./Wrapper";
 import Services from "../lib/Services";
 import ServicesGrid from "./ServicesGrid";
 import Button from "./Button";
+import Seo from "./SEO";
 
 const Service = ({ title, description, images }) => {
   return (
     <Layout>
+      <Seo title={title} />
       <div className="py-10">
         <Wrapper>
           <div className="flex flex-row md:space-x-8">

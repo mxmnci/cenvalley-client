@@ -8,10 +8,12 @@ import BackgroundImage, {
 import { StaticImage } from "gatsby-plugin-image";
 import EmployeeCard from "../components/EmployeeCard";
 import SlideShow from "../components/SlideShow";
+import Seo from "../components/SEO";
 
 const AboutUs = () => {
   return (
     <Layout>
+      <Seo title="About Us" />
       <article>
         <section>
           <BackgroundImage
@@ -317,25 +319,19 @@ const AboutUs = () => {
                   <StaticImage
                     src="../images/001.jpg"
                     placeholder="blurred"
-                    alt="Workers 1"
+                    alt=""
                     className="object-contain"
                   />,
                   <StaticImage
                     src="../images/015.jpg"
                     placeholder="blurred"
-                    alt="Workers 2"
-                    className="object-contain"
-                  />,
-                  <StaticImage
-                    src="../images/016.jpg"
-                    placeholder="blurred"
-                    alt="Workers 3"
+                    alt=""
                     className="object-contain"
                   />,
                   <StaticImage
                     src="../images/024.jpg"
                     placeholder="blurred"
-                    alt="Workers 4"
+                    alt=""
                     className="object-contain"
                   />,
                 ]}

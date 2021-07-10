@@ -3,10 +3,12 @@ import ContactForm from "../components/ContactForm";
 import Layout from "../components/Layout";
 import Wrapper from "../components/Wrapper";
 import { MapContainer, TileLayer, Marker, Popup } from "react-leaflet";
+import Seo from "../components/SEO";
 
 const ContactUs = (props) => {
   return (
     <Layout>
+      <Seo title="Contact Us" />
       <article>
         {typeof window !== "undefined" && (
           <MapContainer

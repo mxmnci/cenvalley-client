@@ -14,10 +14,12 @@ import ContactForm from "../components/ContactForm";
 import ServicesGrid from "../components/ServicesGrid";
 import { BackgroundImageClasses } from "../components/BackgroundImage";
 import Logo from "../lib/Logo";
+import Seo from "../components/SEO";
 
 const Index = () => {
   return (
     <Layout>
+      <Seo title="Home" />
       <article>
         <section className="text-white relative">
           <div style={{ height: 600 }}>
