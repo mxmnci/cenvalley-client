@@ -29,11 +29,11 @@
     "react-dom": "17.0.1",
     "react-helmet": "6.1.0",
     "react-intersection-observer": "8.31.1",
-    "react-leaflet": "3.2.0"
+    "react-leaflet": "3.2.0",
+    "gatsby-plugin-postcss": "4.3.0"
   },
   "devDependencies": {
     "autoprefixer": "10.2.5",
-    "gatsby-plugin-postcss": "4.3.0",
     "postcss": "8.2.10",
     "tailwindcss": "2.1.1"
   }
