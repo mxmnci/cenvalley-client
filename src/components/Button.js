@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { motion } from "framer-motion";
+import { Link } from "gatsby";
 
 const Button = ({
   variant = "primary",
@@ -78,16 +79,17 @@ const Button = ({
   return (
     <>
       {href ? (
-        <motion.a
-          whileHover={animate && { scale: 1.05 }}
-          whileTap={animate && { scale: 0.95 }}
-          href={href}
-          className={`${backgroundColor} ${textColor} ${sizeValue} inline-flex flex-row shadow-sm space-x-2 font-bold items-center`}
-        >
-          {iconPosition === "left" && icon}
-          <span>{message}</span>
-          {iconPosition === "right" && icon}
-        </motion.a>
+        <Link to={href}>
+          <motion.div
+            whileHover={animate && { scale: 1.05 }}
+            whileTap={animate && { scale: 0.95 }}
+            className={`${backgroundColor} ${textColor} ${sizeValue} inline-flex flex-row shadow-sm space-x-2 font-bold items-center`}
+          >
+            {iconPosition === "left" && icon}
+            <span>{message}</span>
+            {iconPosition === "right" && icon}
+          </motion.div>
+        </Link>
       ) : (
         <motion.button
           whileHover={animate && { scale: 1.05 }}

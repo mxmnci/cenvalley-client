@@ -29,7 +29,7 @@ const Service = ({ title, description, images }) => {
                 <Button
                   variant="primary"
                   size="xl"
-                  href="/"
+                  href="/request-a-bid"
                   icon={
                     <svg
                       xmlns="http://www.w3.org/2000/svg"

@@ -184,7 +184,7 @@ const Index = () => {
               header="Ready to seal the deal?"
               subheader="Request a bid today!"
               buttonMessage="Request a Bid"
-              buttonLink="/"
+              buttonLink="/request-a-bid"
               buttonIcon={
                 <svg
                   xmlns="http://www.w3.org/2000/svg"

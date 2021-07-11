@@ -4,6 +4,7 @@ import { motion } from "framer-motion";
 import Button from "./Button";
 import Pages from "../lib/Pages";
 import usePathName from "../util/usePathName";
+import { Link } from "gatsby";
 
 const Index = (props) => {
   const { stickyNavbar, isMobile } = props;
@@ -20,7 +21,7 @@ const Index = (props) => {
         {/* Desktop Navbar */}
         <div className="hidden md:flex flex-row h-full items-center text-white text-xs">
           {Pages.map((page) => (
-            <a key={page.link} href={page.link}>
+            <Link key={page.link} to={page.link}>
               <div
                 className={`flex h-14 font-mono px-9 transition-all duration-300 hover:bg-yellow hover:text-black ${
                   pathName === page.link ? "bg-yellow text-black" : "text-white"
@@ -28,7 +29,7 @@ const Index = (props) => {
               >
                 <span className="self-center">{page.name}</span>
               </div>
-            </a>
+            </Link>
           ))}
           <div className="flex flex-row flex-1 justify-end">
             <Button
