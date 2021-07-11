@@ -8,6 +8,7 @@ const CallToAction = ({
   buttonLink,
   buttonIcon,
   buttonLeft = false,
+  nonGatsbyLink,
 }) => {
   return (
     <div
@@ -29,6 +30,7 @@ const CallToAction = ({
         href={buttonLink}
         icon={buttonIcon}
         message={buttonMessage}
+        nonGatsbyLink={nonGatsbyLink}
       />
     </div>
   );

@@ -10,6 +10,7 @@ const Button = ({
   message,
   iconPosition = "right",
   animate = "true",
+  nonGatsbyLink = false,
 }) => {
   const [backgroundColor, setBackgroundColor] = useState("");
   const [textColor, setTextColor] = useState("");
@@ -79,8 +80,9 @@ const Button = ({
   return (
     <>
       {href ? (
-        <Link to={href}>
-          <motion.div
+        nonGatsbyLink ? (
+          <motion.a
+            href={href}
             whileHover={animate && { scale: 1.05 }}
             whileTap={animate && { scale: 0.95 }}
             className={`${backgroundColor} ${textColor} ${sizeValue} inline-flex flex-row shadow-sm space-x-2 font-bold items-center`}
@@ -88,8 +90,20 @@ const Button = ({
             {iconPosition === "left" && icon}
             <span>{message}</span>
             {iconPosition === "right" && icon}
-          </motion.div>
-        </Link>
+          </motion.a>
+        ) : (
+          <Link to={href}>
+            <motion.div
+              whileHover={animate && { scale: 1.05 }}
+              whileTap={animate && { scale: 0.95 }}
+              className={`${backgroundColor} ${textColor} ${sizeValue} inline-flex flex-row shadow-sm space-x-2 font-bold items-center`}
+            >
+              {iconPosition === "left" && icon}
+              <span>{message}</span>
+              {iconPosition === "right" && icon}
+            </motion.div>
+          </Link>
+        )
       ) : (
         <motion.button
           whileHover={animate && { scale: 1.05 }}

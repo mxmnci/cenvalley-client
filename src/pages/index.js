@@ -83,6 +83,7 @@ const Index = () => {
         <section className="bg-yellow py-10 w-full">
           <Wrapper>
             <CallToAction
+              nonGatsbyLink
               header="Get Started Today With Your Next Project"
               subheader="Call today for a prompt, competitive bid!"
               buttonMessage="Call Now"
