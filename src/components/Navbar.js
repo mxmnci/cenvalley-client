@@ -112,7 +112,7 @@ const Index = (props) => {
         }
       >
         {Pages.map((page, index) => (
-          <a key={page.link} href={page.link}>
+          <Link key={page.link} to={page.link}>
             <motion.li
               className={`py-3 px-3 ${
                 index !== Pages.length - 1 && "border-b-2 border-yellow"
@@ -122,7 +122,7 @@ const Index = (props) => {
             >
               {page.name}
             </motion.li>
-          </a>
+          </Link>
         ))}
       </motion.ul>
     </nav>
