@@ -2,7 +2,7 @@
 
 <p align="center"><img src="https://user-images.githubusercontent.com/38739342/131262100-8d97dd30-be4f-4f4f-8816-ed8c956a3a5e.png" width="400" /></p>
 
-<p align="center">This website was designed to improve the online presenece of <b>Central Valley Engineering & Asphalt, Inc.</b> and give their online clients a more optimized and user-friendly way to get the information they need to make an informed decision about their asphalt needs.</p>
+<p align="center">This website was designed to improve the online presence of <b>Central Valley Engineering & Asphalt, Inc.</b> and give their online clients a more optimized and user-friendly way to get the information they need to make an informed decision about their asphalt needs.</p>
 
 ## Table of Contents
 - [Business needs](#businessneeds)
