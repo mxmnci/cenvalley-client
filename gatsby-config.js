@@ -4,7 +4,7 @@ module.exports = {
     description:
       "Established in 2000, Central Valley Engineering & Asphalt is a regional construction leader. We exist to build smooth, long-lasting surfaces that improve the curb appeal and value of your property while adding the durability and practicality your surfaces need.",
     url: "https://cenvalley.com",
-    image: "/images/cenvalley.jpg"
+    image: "/static/images/cenvalley.jpg"
   },
   plugins: [
     "gatsby-plugin-postcss",
