@@ -3,7 +3,8 @@ module.exports = {
     title: "Central Valley Engineering & Asphalt, Inc.",
     description:
       "Established in 2000, Central Valley Engineering & Asphalt is a regional construction leader. We exist to build smooth, long-lasting surfaces that improve the curb appeal and value of your property while adding the durability and practicality your surfaces need.",
-    siteUrl: "https://cenvalley.com",
+    url: "https://cenvalley.com",
+    image: "src/images/009.jpg"
   },
   plugins: [
     "gatsby-plugin-postcss",
@@ -19,8 +20,8 @@ module.exports = {
         background_color: "#252525",
         theme_color: "#FFFF63",
         display: "standalone",
-        icon: "src/images/logo.svg",
-      },
+        icon: "src/images/logo.svg"
+      }
     },
     {
       resolve: `gatsby-plugin-sharp`,
@@ -34,8 +35,8 @@ module.exports = {
         forceBase64Format: "png", // valid formats: png,jpg,webp
         useMozJpeg: process.env.GATSBY_JPEG_ENCODER === `MOZJPEG`,
         stripMetadata: true,
-        defaultQuality: 50,
-      },
-    },
-  ],
+        defaultQuality: 50
+      }
+    }
+  ]
 };
