@@ -36,7 +36,7 @@ To maintain snappy loading speeds while using the React framework, I chose to us
 <a name="backend" />
 
 ## Backend Technologies
-While most of my backend experience is with Express, I decided to use this project as an opportunity to learn the new Fastify framework. I created two endpoints that send emails to **Central Valley Engineering & Asphalt, Inc.** whenever a user submits the contact form or the request a bid form.
+While most of my backend experience is with Express, I decided to use this project as an opportunity to learn the new Fastify framework. I created two API endpoints that send emails to **Central Valley Engineering & Asphalt, Inc.** whenever a user submits the contact form or the request a bid form.
 - Fastify
 - Nodemailer
 
