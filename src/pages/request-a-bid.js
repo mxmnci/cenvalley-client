@@ -197,7 +197,7 @@ const RequestABid = () => {
                       className="pl-2"
                       htmlFor="commercialAndPublicWorksConstruction"
                     >
-                      Commerical and Public Works Construction
+                      Commercial and Public Works Construction
                     </label>
                   </div>
                   <div className="inline">
