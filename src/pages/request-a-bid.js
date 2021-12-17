@@ -87,6 +87,8 @@ const RequestABid = () => {
                 Request a bid through our website. Complete the following form
                 and click the "Send" button. Someone from our company will
                 contact you promptly.
+
+                Alternatively, you can request a bid over the phone by calling Payton at <a className="text-yellow underline" href="tel:9168056160">(916) 805-6160</a>.
               </p>
               <form
                 className="flex flex-col pt-4 space-y-4"
