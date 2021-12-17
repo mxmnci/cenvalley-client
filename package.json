@@ -19,7 +19,7 @@
     "autoprefixer": "10.2.5",
     "axios": "0.21.1",
     "framer-motion": "4.1.4",
-    "gatsby": "3.2.1",
+    "gatsby": "^4.4.0",
     "gatsby-plugin-image": "1.4.0",
     "gatsby-plugin-manifest": "3.4.0",
     "gatsby-plugin-postcss": "4.3.0",
@@ -35,8 +35,5 @@
     "react-intersection-observer": "8.31.1",
     "react-leaflet": "3.2.0",
     "tailwindcss": "2.1.1"
-  },
-  "resolutions": {
-    "webpack": "5.52.1"
   }
 }
