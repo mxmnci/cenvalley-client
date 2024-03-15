@@ -308,11 +308,11 @@ const AboutUs = () => {
                 <EmployeeCard
                   image={
                     <StaticImage
-                      src="../images/Kali-Spraggins.jpg"
-                      alt="Kali Spraggins"
+                      src="../images/Kalli-Spraggins.jpg"
+                      alt="Kalli Spraggins"
                     />
                   }
-                  name="Kali Spraggins"
+                  name="Kalli Spraggins"
                   title="Fleet/Safety Coordinator"
                   year={2023}
                 />
