@@ -1,26 +1,39 @@
 daemon off;
-worker_processes 1;
+pid /app/nginx.pid;
+error_log stderr info;
+worker_processes <%= ENV['NGINX_WORKERS'] || 4 %>;
 
 events {
-    worker_connections 1024;
+    use epoll;
+    accept_mutex on;
+    worker_connections <%= ENV['NGINX_WORKER_CONNECTIONS'] || 1024 %>;
 }
 
 http {
+    gzip on;
+    gzip_comp_level 2;
+    gzip_min_length 512;
+    gzip_proxied any;
+    gzip_types text/plain text/css application/json application/javascript text/xml application/xml text/javascript;
+
+    server_tokens off;
+    log_format l2met 'measure#nginx.service=$request_time request_id=$http_x_request_id';
+    access_log /dev/stdout l2met;
+
     include mime.types;
     default_type application/octet-stream;
     sendfile on;
-    keepalive_timeout 65;
-    port_in_redirect off;
-    access_log /dev/stdout;
-    error_log stderr;
+
+    client_body_timeout <%= ENV['NGINX_CLIENT_BODY_TIMEOUT'] || 5 %>;
 
     server {
         listen <%= ENV["PORT"] %>;
-        charset utf-8;
+        server_name _;
+        keepalive_timeout 5;
         root public/;
         index index.html;
 
-        # Handle single page application routing
+        # Gatsby routing
         location / {
             try_files $uri $uri/index.html /index.html;
             expires -1;
@@ -28,13 +41,12 @@ http {
 
         # Static assets
         location /static/ {
-            expires max;
+            expires 7d;
             add_header Cache-Control "public, immutable";
         }
 
-        # JavaScript and CSS files
         location ~* \.(js|css)$ {
-            expires max;
+            expires 7d;
             add_header Cache-Control "public, immutable";
         }
     }
