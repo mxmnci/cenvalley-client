@@ -110,6 +110,17 @@ const AboutUs = () => {
                 <EmployeeCard
                   image={
                     <StaticImage
+                      src="../images/Jake-Leppek.jpg"
+                      alt="Jake Leppek"
+                    />
+                  }
+                  name="Jake Leppek"
+                  title="Controller"
+                  year={2024}
+                />
+                <EmployeeCard
+                  image={
+                    <StaticImage
                       src="../images/Jamie-Gruzas.jpg"
                       alt="Jamie Gruzas"
                     />
@@ -315,17 +326,6 @@ const AboutUs = () => {
                   name="Kalli Spraggins"
                   title="Fleet/Safety Coordinator"
                   year={2023}
-                />
-                <EmployeeCard
-                  image={
-                    <StaticImage
-                      src="../images/Jake-Leppek.jpg"
-                      alt="Jake Leppek"
-                    />
-                  }
-                  name="Jake Leppek"
-                  title="Controller"
-                  year={2024}
                 />
               </div>
             </div>
