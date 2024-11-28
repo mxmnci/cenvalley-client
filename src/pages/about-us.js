@@ -99,23 +99,12 @@ const AboutUs = () => {
                 <EmployeeCard
                   image={
                     <StaticImage
-                      src="../images/James-Castle.jpg"
-                      alt="James Castle"
-                    />
-                  }
-                  name="James Castle"
-                  title="Chief Financial Officer"
-                  year={2005}
-                />
-                <EmployeeCard
-                  image={
-                    <StaticImage
                       src="../images/James-Wagner.jpg"
                       alt="James Wagner"
                     />
                   }
                   name="James Wagner"
-                  title="Controller"
+                  title="Chief Financial Officer"
                   year={2007}
                 />
                 <EmployeeCard
@@ -148,19 +137,19 @@ const AboutUs = () => {
                     />
                   }
                   name="Paul Aguirre"
-                  title="Estimator"
+                  title="Sales/Estimator"
                   year={2001}
                 />
                 <EmployeeCard
                   image={
                     <StaticImage
-                      src="../images/Phil-Buffington.jpg"
-                      alt="Phil Buffington"
+                      src="../images/Dennis-Rundle.jpg"
+                      alt="Dennis Rundle"
                     />
                   }
-                  name="Phil Buffington"
-                  title="Project Manager/Estimator"
-                  year={2016}
+                  name="Dennis Rundle"
+                  title="Sales/Estimator"
+                  year={2024}
                 />
                 <EmployeeCard
                   image={
@@ -172,6 +161,17 @@ const AboutUs = () => {
                   name="Rob Hannah"
                   title="Project Manager/Estimator"
                   year={2022}
+                />
+                <EmployeeCard
+                  image={
+                    <StaticImage
+                      src="../images/Phil-Buffington.jpg"
+                      alt="Phil Buffington"
+                    />
+                  }
+                  name="Phil Buffington"
+                  title="Project Manager/Estimator"
+                  year={2016}
                 />
                 <EmployeeCard
                   image={
@@ -316,6 +316,17 @@ const AboutUs = () => {
                   title="Fleet/Safety Coordinator"
                   year={2023}
                 />
+                <EmployeeCard
+                  image={
+                    <StaticImage
+                      src="../images/Jake-Leppek.jpg"
+                      alt="Jake Leppek"
+                    />
+                  }
+                  name="Jake Leppek"
+                  title="Controller"
+                  year={2024}
+                />
               </div>
             </div>
           </Wrapper>
@@ -338,11 +349,8 @@ const AboutUs = () => {
                   heading="Our Certifications"
                   subheading="We've put in the work"
                 />
-                <div className="flex flex-col w-full space-y-6 font-semibold text-white md:flex-row space-evenly">
-                  <a
-                    className="flex-grow"
-                    href="https://goldshovelstandard.org/"
-                  >
+                <div className="flex flex-col w-full space-y-6 font-semibold text-white md:flex-row md:items-end justify-between max-w-2xl">
+                  <a className="w-fit" href="https://goldshovelstandard.org/">
                     <StaticImage
                       src="../images/GSS.png"
                       placeholder="blurred"
@@ -351,12 +359,9 @@ const AboutUs = () => {
                       width={250}
                       layout="constrained"
                     />
-                    <p>Gold Shovel Standard Certified</p>
+                    <p className="mt-2">Gold Shovel Standard Certified</p>
                   </a>
-                  <a
-                    className="flex-grow"
-                    href="https://www.isnetworld.com/en/"
-                  >
+                  <a className="w-fit" href="https://www.isnetworld.com/en/">
                     <StaticImage
                       src="../images/ISN.png"
                       placeholder="blurred"
@@ -365,9 +370,16 @@ const AboutUs = () => {
                       width={250}
                       layout="constrained"
                     />
-                    <p>ISNetworld Member Contractor</p>
+                    <p className="mt-2">ISNetworld Member Contractor</p>
                   </a>
                 </div>
+                <p className="text-white text-sm mt-10 text-center max-w-2xl font-semibold">
+                  Central Valley Engineering & Asphalt, Inc. is an Equal
+                  Opportunity Employer. All qualified applicants will receive
+                  consideration for employment without regard to race, color,
+                  religion, sex, sexual orientation, gender identity, national
+                  origin, disability, or status as a protected veteran.
+                </p>
               </div>
             </Wrapper>
           </BackgroundImage>
