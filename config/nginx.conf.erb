@@ -1,5 +1,5 @@
 daemon off;
-worker_processes auto;
+worker_processes 1;
 
 events {
     worker_connections 1024;
@@ -8,23 +8,34 @@ events {
 http {
     include mime.types;
     default_type application/octet-stream;
+    sendfile on;
+    keepalive_timeout 65;
+    port_in_redirect off;
     access_log /dev/stdout;
     error_log stderr;
 
     server {
-        listen <%= ENV["PORT"] %> default_server;
-        server_name _;
+        listen <%= ENV["PORT"] %>;
+        charset utf-8;
         root public/;
         index index.html;
 
+        # Handle single page application routing
         location / {
-            try_files $uri $uri/ /index.html =404;
-            add_header Cache-Control "public, max-age=0, must-revalidate";
+            try_files $uri $uri/index.html /index.html;
+            expires -1;
         }
 
-        location ~* \.(?:js|css)$ {
+        # Static assets
+        location /static/ {
             expires max;
-            add_header Cache-Control "public, max-age=31536000, immutable";
+            add_header Cache-Control "public, immutable";
+        }
+
+        # JavaScript and CSS files
+        location ~* \.(js|css)$ {
+            expires max;
+            add_header Cache-Control "public, immutable";
         }
     }
 }
