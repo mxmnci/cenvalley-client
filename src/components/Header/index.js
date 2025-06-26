@@ -6,6 +6,53 @@ import Logo from "../../lib/Logo";
 const Header = () => {
   return (
     <header>
+      {/* Hiring Banner - Desktop */}
+      <div className="hidden md:flex w-full bg-secondary text-yellow text-center py-2 px-2 justify-center items-center">
+        <a
+          href="https://central-valley-engineering-and-asphalt-inc.viewpointhr-ats.com/job/933438/laborer-operator-driver-cement-mason"
+          className="font-mono flex items-center justify-center space-x-2 hover:underline"
+        >
+          <span>Central Valley is hiring, apply now!</span>
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            className="h-4 w-4"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke="currentColor"
+          >
+            <path
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              strokeWidth={2}
+              d="M10 6H6a2 2 0 00-2 2v8a2 2 0 002 2h8a2 2 0 002-2v-4m-1-9h5m0 0v5m0-5L10 14"
+            />
+          </svg>
+        </a>
+      </div>
+
+      {/* Hiring Banner - Mobile (fixed bottom) */}
+      <div className="md:hidden fixed bottom-0 left-0 w-full bg-secondary text-yellow text-center py-3 px-3 z-50">
+        <a
+          href="https://central-valley-engineering-and-asphalt-inc.viewpointhr-ats.com/job/933438/laborer-operator-driver-cement-mason"
+          className="font-mono flex items-center justify-center space-x-2 text-sm hover:underline"
+        >
+          <span>We're hiring! Apply now!</span>
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            className="h-4 w-4"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke="currentColor"
+          >
+            <path
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              strokeWidth={2}
+              d="M10 6H6a2 2 0 00-2 2v8a2 2 0 002 2h8a2 2 0 002-2v-4m-1-9h5m0 0v5m0-5L10 14"
+            />
+          </svg>
+        </a>
+      </div>
       <div
         className="hidden md:block w-full overflow-hidden"
         style={{ height: 100 }}
